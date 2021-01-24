@@ -1,0 +1,9 @@
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\bin\Debug\netcoreapp3.1\PhotoEditorLIB.deps.json
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\bin\Debug\netcoreapp3.1\PhotoEditorLIB.dll
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.AssemblyInfoInputs.cache
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.AssemblyInfo.cs
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\bin\Debug\netcoreapp3.1\PhotoEditorLIB.pdb
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.csproj.CoreCompileInputs.cache
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.dll
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.pdb
+D:\Study\SPP\PhotoEditorLIB\PhotoEditorLIB\obj\Debug\netcoreapp3.1\PhotoEditorLIB.csprojAssemblyReference.cache

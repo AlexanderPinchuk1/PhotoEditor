@@ -1,0 +1,92 @@
+﻿<Window x:Class="PhotoEditorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhotoEditorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1420" ResizeMode="NoResize" AllowDrop="True" DragDrop.DragEnter="Window_DragEnter" DragDrop.Drop="Window_Drop">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Name ="DrawColumn" Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="ListBoxPhotos" Margin="20" Grid.Column="0" SelectionChanged="ListBox_SelectionChanged"/>
+
+        <Border Name="DrawAreaBorder" Margin="20"  BorderBrush="PaleGreen" BorderThickness="1" Grid.Column="1" >
+            <Canvas Name="DrawArea" ClipToBounds="True" Background="AliceBlue" MouseLeftButtonDown="DrawArea_MouseLeftButtonDown" MouseLeftButtonUp="DrawArea_MouseLeftButtonUp" MouseMove="DrawArea_MouseMove">
+                <Image Name="SelectedImage" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Canvas>
+        </Border>
+        
+        <Grid Margin="20" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Margin="15" FontSize="14" Grid.Row="0" Grid.Column="0" Text="Brightness"/>
+            <Slider Name="SliderBrightness" Margin="15" Maximum="130" Minimum="0" Value="30" TickFrequency="10"  Grid.Row="0" Grid.Column="1" ValueChanged="SliderBrightness_ValueChanged"/>
+            
+            <TextBlock Margin="15,15,15,15" FontSize="14" Grid.Row="1" Grid.Column="0" Text="Contrast"/>
+            <Slider Name="SliderContrast" Margin="15" Maximum="140" Minimum="0" Value="10" TickFrequency="10" Grid.Row="1" Grid.Column="1"  ValueChanged="SliderContrast_ValueChanged"/>
+
+
+            <TextBlock Margin="15,15,15,15" FontSize="14" Grid.Row="5" Grid.Column="0" Text="Image size"/>
+            <Button Name="ButIncrease" Margin="15 10 140 10" Height="30" Content="+" Grid.Column="1" Grid.Row="5" Click="ButIncrease_Click"/>
+            <Button Name="ButDecrease" Margin="140 10 15 10" Height="30" Content="-" Grid.Column="1" Grid.Row="5" Click="ButDecrease_Click"/>
+            
+            <Button Name="ButTurnImage"  Margin="15 10" Height="30" Content="Turn" Grid.Column="0" Grid.Row="6" Click="ButTurnImage_Click"/>
+            <TextBox Name ="TextBoxTurnAngle" Padding="5" MaxLength="3" Margin="15" Grid.Row="6" Grid.Column="1" PreviewTextInput="TextBoxTurnAngle_PreviewTextInput"/>
+
+            <TextBlock Margin="15" FontSize="14" Grid.Row="8" Grid.Column="0" Text="Pen Color"/>
+            <Grid Grid.Column="1" Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Margin="15" FontSize="14" Grid.Row="0" Grid.Column="0" Text="R"/>
+                <Slider Name="SliderPenRedColor" Margin="15" Maximum="255" Minimum="0" Value="15" TickFrequency="5" Grid.Row="0" Grid.Column="1" ValueChanged="SliderPenRedColor_ValueChanged" />
+
+                <TextBlock Margin="15" FontSize="14" Grid.Row="1" Grid.Column="0" Text="G"/>
+                <Slider Name="SliderPenGreenColor" Margin="15" Maximum="255" Minimum="0" Value="15" TickFrequency="5" Grid.Row="1" Grid.Column="1" ValueChanged="SliderPenGreenColor_ValueChanged"/>
+
+                <TextBlock Margin="15" FontSize="14" Grid.Row="2" Grid.Column="0" Text="B"/>
+                <Slider Name="SliderPenBlueColor" Margin="15" Maximum="255" Minimum="0" Value="15" TickFrequency="5" Grid.Row="2" Grid.Column="1" ValueChanged="SliderPenBlueColor_ValueChanged"/>
+            </Grid>
+
+            <TextBlock Margin="15" FontSize="14" Grid.Row="7" Grid.Column="0" Text="Pen size"/>
+            <Slider Name="SliderPenSize" Margin="15" Maximum="100" Minimum="5" Value="15" TickFrequency="5" Grid.Row="7" Grid.Column="1" ValueChanged="SliderPenSize_ValueChanged"/>
+
+            <TextBlock Margin="15" Padding="25 0" FontSize="14" Grid.Row="2" Grid.Column="0" Text="R"/>
+            <Slider Name="SliderRedColor" Margin="15" Maximum="130" Minimum="0" Value="20" TickFrequency="10" Interval="1000" Grid.Row="2" Grid.Column="1" ValueChanged="SliderRedColor_ValueChanged" />
+
+            <TextBlock Margin="15" Padding="25 0" FontSize="14" Grid.Row="3" Grid.Column="0" Text="G"/>
+            <Slider Name="SliderGreenColor" Margin="15" Maximum="130" Minimum="0" Value="20" TickFrequency="10" Grid.Row="3" Grid.Column="1" ValueChanged="SliderGreenColor_ValueChanged" />
+
+            <TextBlock Margin="15" Padding="25 0" FontSize="14" Grid.Row="4" Grid.Column="0" Text="B"/>
+            <Slider Name="SliderBlueColor" Margin="15" Maximum="130" Minimum="0" Value="20" TickFrequency="10" Grid.Row="4" Grid.Column="1"  ValueChanged="SliderBlueColor_ValueChanged"/>
+
+            <Button Name="ButSave" Margin="15" Content="Save" Grid.Column="1" Grid.Row="9" Click="ButSave_Click"/>
+        </Grid>
+    </Grid>
+</Window>

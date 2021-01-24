@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+xDR2bZIk/1KpRsWovy2+8HkxXg+1yXZJlOnwW1A28LmzG+OshLJiZExb0yqWEMRjWD9LonsQNBft+2cXc/j5Q==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\SPP\\PhotoEditor\\PhotoEditorWPF\\PhotoEditorWPF\\PhotoEditorWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

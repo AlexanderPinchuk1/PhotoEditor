@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "KKm+xWy/x0ExEmtF3zxwLB1j+j8UssWpLIpcKj8pdyeUjYuyKfWkU93x29TUSZ0G5tHpLl2XtQMmtS/++GffYQ==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\SPP\\PhotoEditorLIB\\PhotoEditorLIB\\PhotoEditorLIB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leopard\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Leopard\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Leopard\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
